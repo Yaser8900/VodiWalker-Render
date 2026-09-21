@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: vodiwalker
+    runtime: docker
+    plan: free
+    envVars:
+      - key: DATA_DIR
+        value: /var/data
+    disk:
+      name: vodiwalker-data
+      mountPath: /var/data
+      sizeGB: 1
